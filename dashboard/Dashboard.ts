@@ -1,4 +1,4 @@
-import { CustomerReference } from '../account/Account';
+import { CustomerReference } from 'cofe-ct-b2b-ecommerce/types//account/Account';
 import { Widget } from '../widget/Widget';
 
 export interface DashboardCustomObject extends DashboardCustomObjectDraft {

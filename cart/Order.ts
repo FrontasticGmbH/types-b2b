@@ -1,21 +1,6 @@
-import { Cart } from './Cart';
-import { LineItemReturnItemDraft } from './LineItem';
+import { Order as B2BOrder } from 'cofe-ct-b2b-ecommerce/types/cart/Order';
 
-export interface ReturnInfoItem extends LineItemReturnItemDraft {
-  createdAt?: string;
-  returnInfoId: string;
-}
-
-export interface ReturnInfo {
-  items: ReturnInfoItem[];
-  returnDate?: string;
-  returnTrackingId?: string;
-}
-
-export interface Order extends Cart {
-  orderId?: string;
-  orderVersion?: string;
-  orderState?: string;
-  createdAt?: string;
-  returnInfo?: ReturnInfo[];
+export interface Order extends B2BOrder {
+    isPreBuyCart?: boolean;
+    state?: any;
 }

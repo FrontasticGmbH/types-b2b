@@ -1,0 +1,18 @@
+{
+    "name": "@frontastic/types-b2b",
+    "version": "1.0.1",
+    "license": "MIT",
+    "private": true,
+    "files": [
+        "build/**/*"
+    ],
+    "scripts": {
+        "build": "rm -rf build && tsc",
+        "ts-watch": "tsc -watch --noEmit"
+    },
+    "dependencies": {
+        "@commercetools/frontend-domain-types": "^1.0.3",
+        "cofe-ct-b2b-ecommerce": "^1.0.18",
+        "typescript": "^4.9.4"
+    }
+}

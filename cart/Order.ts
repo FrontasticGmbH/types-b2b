@@ -18,4 +18,6 @@ export interface Order extends Cart {
   orderState?: string;
   createdAt?: string;
   returnInfo?: ReturnInfo[];
+  isPreBuyCart?: boolean;
+  state?: any;
 }

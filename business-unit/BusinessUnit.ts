@@ -1,5 +1,5 @@
 import { Money } from '../product/Money';
-import { StoreKeyReference } from '../store/store';
+import { StoreKeyReference } from '../store/Store';
 import { Associate } from '../associate/Associate';
 import { Address } from '../account/Address';
 

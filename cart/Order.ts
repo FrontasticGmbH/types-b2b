@@ -1,5 +1,5 @@
-import { Cart } from './Cart';
 import { LineItemReturnItemDraft } from './LineItem';
+import { Cart } from './Cart';
 
 export interface ReturnInfoItem extends LineItemReturnItemDraft {
   createdAt?: string;
@@ -17,7 +17,8 @@ export interface Order extends Cart {
   orderVersion?: string;
   orderState?: string;
   createdAt?: string;
+  businessUnit?: string;
   returnInfo?: ReturnInfo[];
-  isPreBuyCart?: boolean;
+  purchaseOrderNumber?: string;
   state?: any;
 }

@@ -1,6 +1,10 @@
-import { Store } from '@Types/store/Store';
-import { Organization as B2Borganization } from 'cofe-ct-b2b-ecommerce/types/organization/organization';
+import { Store } from '../store/Store';
+import { ChannelResourceIdentifier } from '../channel/channel';
+import { BusinessUnit } from '../business-unit/BusinessUnit';
 
-export interface Organization extends B2Borganization {
-    store: Store;
+export interface Organization {
+  businessUnit: BusinessUnit;
+  distributionChannel: ChannelResourceIdentifier;
+  store: Store;
+  superUserBusinessUnitKey?: string;
 }

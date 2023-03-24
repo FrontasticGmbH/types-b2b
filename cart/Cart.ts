@@ -7,7 +7,7 @@ import { Tax } from './Tax';
 import { ShippingInfo } from './ShippingInfo';
 import { Money } from '../product/Money';
 import { Order } from './Order';
-import { Product } from '@Types/product/Product';
+import { Product } from '../product/Product';
 
 export interface Subscription {
   order?: Order;

@@ -38,6 +38,8 @@ export interface BusinessUnit {
   defaultShipingAddress?: number;
   billingAddresses?: number[];
   defaultBillingAddress?: number;
+  defaultShippingAddressId?: string;
+  defaultBillingAddressId?: string;
   associates?: Associate[];
   parentUnit?: BusinessUnitResourceIdentifier;
   topLevelUnit?: BusinessUnitResourceIdentifier;

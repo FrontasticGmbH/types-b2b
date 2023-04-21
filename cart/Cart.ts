@@ -43,7 +43,7 @@ export interface Cart {
   businessUnit?: string;
   isPreBuyCart?: boolean;
   subscription?: Subscription;
-  customerId: string;
+  customerId?: string;
   store?: string;
   // TODO: import the logic from Cart.php
 }

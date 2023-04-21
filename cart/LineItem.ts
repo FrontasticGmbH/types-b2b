@@ -23,7 +23,7 @@ export interface LineItem {
   discountTexts?: string[]; //Discount texts, if any applied
   discounts?: Discount[];
   totalPrice?: Money;
-  variant: Variant;
+  variant?: Variant;
   isGift?: boolean;
   _url?: string;
   shippingDetails?: {

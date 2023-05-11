@@ -2,7 +2,7 @@ import { LineItem } from '../cart/LineItem';
 import { StagedQuote } from './StagedQuote';
 import { Quote } from './Quote';
 import { CustomerReference } from '../account/Account';
-import { StoreKeyReference } from '../store/store';
+import { StoreKeyReference } from '../store/Store';
 import { Money } from '../product/Money';
 import { BusinessUnitResourceIdentifier } from '../business-unit/BusinessUnit';
 import { Address } from '../account/Address';

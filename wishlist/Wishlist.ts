@@ -1,4 +1,4 @@
-import { Store } from '../store/store';
+import { Store } from '../store/Store';
 import { LineItem } from './LineItem';
 
 

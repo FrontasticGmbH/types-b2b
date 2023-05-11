@@ -13,6 +13,7 @@ export interface ReturnInfo {
 }
 
 export interface Order extends Cart {
+  isPreBuyCart?: boolean;
   orderId?: string;
   orderVersion?: string;
   orderState?: string;

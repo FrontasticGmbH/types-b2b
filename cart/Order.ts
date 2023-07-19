@@ -1,7 +1,7 @@
-import { LineItemReturnItemDraft } from './LineItem';
+import { ReturnItem } from './LineItem';
 import { Cart } from './Cart';
 
-export interface ReturnInfoItem extends LineItemReturnItemDraft {
+export interface ReturnInfoItem extends ReturnItem {
   createdAt?: string;
   returnInfoId: string;
 }

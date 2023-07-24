@@ -2,7 +2,7 @@ import { Discount } from './Discount';
 import { Variant } from '../product/Variant';
 import { Money } from '../product/Money';
 
-export interface ReturnItem {
+export interface ReturnLineItem {
   count: number;
   lineItemId: string;
   comment?: string;

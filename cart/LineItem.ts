@@ -8,10 +8,11 @@ export interface ReturnLineItem {
   comment?: string;
 }
 
-export interface Target {
+export interface LineItemShippingAddress {
   count: number;
   addressKey: string;
 }
+
 export interface LineItem {
   lineItemId?: string;
   productId?: string;
@@ -26,10 +27,7 @@ export interface LineItem {
   variant?: Variant;
   isGift?: boolean;
   _url?: string;
-  shippingDetails?: {
-    targets?: Target[];
-    valid: boolean;
-  };
+  shippingAddresses?: LineItemShippingAddress[];
   parentId?: string;
   custom?: Record<string, any>;
 }

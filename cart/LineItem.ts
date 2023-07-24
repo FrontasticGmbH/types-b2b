@@ -9,7 +9,7 @@ export interface ReturnItem {
 }
 
 export interface Target {
-  quantity: number;
+  count: number;
   addressKey: string;
 }
 export interface LineItem {

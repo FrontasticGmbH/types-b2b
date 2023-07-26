@@ -1,7 +1,7 @@
 import { LineItem } from '../cart/LineItem';
 import { StagedQuote } from './StagedQuote';
 import { Quote } from './Quote';
-import { CustomerReference } from '../account/Account';
+import { Account } from '../account/Account';
 import { StoreKeyReference } from '../store/Store';
 import { Money } from '../product/Money';
 import { BusinessUnitResourceIdentifier } from '../business-unit/BusinessUnit';
@@ -27,7 +27,7 @@ export interface QuoteRequest {
 
   readonly comment?: string;
 
-  readonly customer: CustomerReference;
+  readonly customer: Account;
 
   readonly store?: StoreKeyReference;
 

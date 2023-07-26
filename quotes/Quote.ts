@@ -1,4 +1,4 @@
-import { CustomerReference } from '../account/Account';
+import { Account } from '../account/Account';
 import { Address } from '../account/Address';
 import { BusinessUnitResourceIdentifier } from '../business-unit/BusinessUnit';
 import { Money } from '../product/Money';
@@ -15,7 +15,7 @@ export interface Quote {
   readonly lastModifiedAt: string;
   readonly quoteRequest?: QuoteRequestReference;
   readonly stagedQuote: StagedQuoteReference;
-  readonly customer?: CustomerReference;
+  readonly customer?: Account;
   readonly sellerComment?: string;
   readonly buyerComment?: string;
   readonly store?: StoreKeyReference;

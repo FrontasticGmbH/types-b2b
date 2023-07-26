@@ -10,17 +10,10 @@ export interface Account {
   lastName?: string;
   companyName?: string;
   birthday?: Date;
-  password?: string; // TODO: should we use hash the password or use plain password?
+  password?: string;
   groups?: Group[];
   confirmationToken?: AccountToken;
   confirmed?: boolean;
-  tokenValidUntil?: Date;
   addresses?: Address[];
   apiToken?: string;
-}
-
-export interface CustomerReference {
-  obj?: any;
-  id: string;
-  typeId: 'customer';
 }

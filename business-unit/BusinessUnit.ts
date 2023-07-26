@@ -1,7 +1,7 @@
 import { Money } from '../product/Money';
 import { StoreKeyReference } from '../store/Store';
-import { Associate } from '../associate/Associate';
 import { Address } from '../account/Address';
+import { Associate } from '../account/Associate';
 
 export enum BusinessUnitType {
   Company = 'Company',
@@ -62,4 +62,3 @@ export interface BusinessUnitPagedQueryResponse {
   offset: number;
   results: BusinessUnit[];
 }
-

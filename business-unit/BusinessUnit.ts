@@ -1,7 +1,7 @@
 import { Money } from '../product/Money';
 import { StoreKeyReference } from '../store/Store';
 import { Address } from '../account/Address';
-import { Associate } from '../account/Associate';
+import { Associate } from './Associate';
 
 export enum BusinessUnitType {
   Company = 'Company',

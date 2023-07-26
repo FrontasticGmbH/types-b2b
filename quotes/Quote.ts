@@ -1,6 +1,6 @@
 import { Account } from '../account/Account';
 import { Address } from '../account/Address';
-import { BusinessUnitResourceIdentifier } from '../business-unit/BusinessUnit';
+import { BusinessUnit } from '../business-unit/BusinessUnit';
 import { Money } from '../product/Money';
 import { StoreKeyReference } from '../store/Store';
 import { LineItem } from '../cart/LineItem';
@@ -27,5 +27,5 @@ export interface Quote {
   readonly itemShippingAddresses?: Address[];
   readonly directDiscounts?: any[];
   quoteState?: string;
-  readonly businessUnit?: BusinessUnitResourceIdentifier;
+  readonly businessUnit?: BusinessUnit;
 }

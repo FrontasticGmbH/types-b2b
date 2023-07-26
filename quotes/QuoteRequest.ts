@@ -4,7 +4,7 @@ import { Quote } from './Quote';
 import { Account } from '../account/Account';
 import { StoreKeyReference } from '../store/Store';
 import { Money } from '../product/Money';
-import { BusinessUnitResourceIdentifier } from '../business-unit/BusinessUnit';
+import { BusinessUnit } from '../business-unit/BusinessUnit';
 import { Address } from '../account/Address';
 
 export interface QuoteRequestReference {
@@ -45,7 +45,7 @@ export interface QuoteRequest {
 
   readonly directDiscounts?: any[];
 
-  readonly businessUnit?: BusinessUnitResourceIdentifier;
+  readonly businessUnit?: BusinessUnit;
   staged?: StagedQuote;
   quoted?: Quote;
   highlight?: boolean;

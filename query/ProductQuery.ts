@@ -21,4 +21,5 @@ export interface ProductQuery extends PaginatedQuery {
   filters?: Filter[];
   facets?: Facet[];
   sortAttributes?: SortAttributes;
+  storeKey?: string;
 }

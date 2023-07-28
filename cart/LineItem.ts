@@ -9,8 +9,8 @@ export interface ReturnLineItem {
 }
 
 export interface LineItemShippingAddress {
-  count: number;
   addressKey: string;
+  count: number;
 }
 
 export interface LineItem {
@@ -21,13 +21,16 @@ export interface LineItem {
   count?: number;
   price?: Money; // Price of a single item
   discountedPrice?: Money; // Discounted price per item
-  discountTexts?: string[]; //Discount texts, if any applied
+  discountTexts?: string[]; // Discount texts, if any applied
   discounts?: Discount[];
   totalPrice?: Money;
   variant?: Variant;
   isGift?: boolean;
   _url?: string;
-  shippingAddresses?: LineItemShippingAddress[];
+  shippingDetails?: {
+    shippingAddresses?: LineItemShippingAddress[];
+    valid: boolean; // true if the quantity of the Line Item is equal to the sum of the sub-quantities in shippingAddresses, else it is false.
+  };
   parentId?: string;
   custom?: Record<string, any>;
 }

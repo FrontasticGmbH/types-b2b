@@ -1,7 +1,6 @@
-import { Money } from '../product/Money';
-import { StoreKeyReference } from '../store/Store';
-import { Associate } from '../associate/Associate';
+import { Store } from '../store/Store';
 import { Address } from '../account/Address';
+import { Associate } from './Associate';
 
 export enum BusinessUnitType {
   Company = 'Company',
@@ -18,48 +17,20 @@ export enum StoreMode {
   FromParent = 'FromParent',
 }
 
-export interface BusinessUnitResourceIdentifier {
-  id?: string;
-  key: string;
-  typeId: 'business-unit';
-}
-
 export interface BusinessUnit {
-  key: string;
+  businessUnitId?: string;
+  key?: string;
+  name?: string;
   status?: BusinessUnitStatus | string;
-  createdAt?: string;
-  stores?: StoreKeyReference[];
+  stores?: Store[];
   storeMode?: StoreMode | string;
   unitType?: BusinessUnitType | string;
-  name: string;
   contactEmail?: string;
-  addresses?: (Address & { id?: string })[];
-  shippingAddresses?: number[];
-  defaultShipingAddress?: number;
-  billingAddresses?: number[];
-  defaultBillingAddress?: number;
+  addresses?: Address[];
   defaultShippingAddressId?: string;
   defaultBillingAddressId?: string;
   associates?: Associate[];
-  parentUnit?: BusinessUnitResourceIdentifier;
-  topLevelUnit?: BusinessUnitResourceIdentifier;
+  parentUnit?: BusinessUnit;
+  topLevelUnit?: BusinessUnit;
   version?: number;
-  children?: BusinessUnit[];
-  isRootAdmin?: boolean;
-  isAdmin?: boolean;
-  custom?: {
-    fields?: {
-      budget?: Money;
-      workflows?: string;
-    };
-  };
 }
-
-export interface BusinessUnitPagedQueryResponse {
-  total?: number;
-  count: number;
-  limit: number;
-  offset: number;
-  results: BusinessUnit[];
-}
-

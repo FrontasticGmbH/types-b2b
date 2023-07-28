@@ -1,10 +1,10 @@
 import { LineItem } from '../cart/LineItem';
 import { StagedQuote } from './StagedQuote';
 import { Quote } from './Quote';
-import { CustomerReference } from '../account/Account';
-import { StoreKeyReference } from '../store/Store';
+import { Account } from '../account/Account';
+import { Store } from '../store/Store';
 import { Money } from '../product/Money';
-import { BusinessUnitResourceIdentifier } from '../business-unit/BusinessUnit';
+import { BusinessUnit } from '../business-unit/BusinessUnit';
 import { Address } from '../account/Address';
 
 export interface QuoteRequestReference {
@@ -27,9 +27,9 @@ export interface QuoteRequest {
 
   readonly comment?: string;
 
-  readonly customer: CustomerReference;
+  readonly customer: Account;
 
-  readonly store?: StoreKeyReference;
+  readonly store?: Store;
 
   readonly lineItems: LineItem[];
 
@@ -45,7 +45,7 @@ export interface QuoteRequest {
 
   readonly directDiscounts?: any[];
 
-  readonly businessUnit?: BusinessUnitResourceIdentifier;
+  readonly businessUnit?: BusinessUnit;
   staged?: StagedQuote;
   quoted?: Quote;
   highlight?: boolean;

@@ -1,18 +1,9 @@
-import { ChannelResourceIdentifier } from '../channel/channel';
+import { Channel } from './Channel';
 
 export interface Store {
+  storeId?: string;
   key: string;
-  name: string;
-  id?: string;
-  distributionChannels?: ChannelResourceIdentifier[];
-  supplyChannels?: ChannelResourceIdentifier[];
-  isPreBuyStore?: boolean;
-  storeRootCategoryId?: string
-}
-
-export interface StoreKeyReference {
-  key?: string;
-  id?: string;
-  typeId: 'store';
   name?: string;
+  distributionChannels?: Channel[];
+  supplyChannels?: Channel[];
 }

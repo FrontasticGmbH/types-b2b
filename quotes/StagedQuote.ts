@@ -1,5 +1,5 @@
-import { CustomerReference } from '../account/Account';
-import { BusinessUnitResourceIdentifier } from '../business-unit/BusinessUnit';
+import { Account } from '../account/Account';
+import { BusinessUnit } from '../business-unit/BusinessUnit';
 import { Cart, CartReference } from '../cart/Cart';
 import { QuoteRequestReference } from './QuoteRequest';
 
@@ -21,7 +21,7 @@ export interface StagedQuote {
 
   readonly stagedQuoteState: string;
 
-  readonly customer?: CustomerReference;
+  readonly customer?: Account;
 
   readonly quoteRequest: QuoteRequestReference;
 
@@ -31,7 +31,7 @@ export interface StagedQuote {
 
   readonly state?: string;
 
-  readonly businessUnit?: BusinessUnitResourceIdentifier;
+  readonly businessUnit?: BusinessUnit;
 
   quotationCart: Cart | CartReference;
 }

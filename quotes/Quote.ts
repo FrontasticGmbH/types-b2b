@@ -2,7 +2,7 @@ import { Account } from '../account/Account';
 import { Address } from '../account/Address';
 import { BusinessUnit } from '../business-unit/BusinessUnit';
 import { Money } from '../product/Money';
-import { StoreKeyReference } from '../store/Store';
+import { Store } from '../store/Store';
 import { LineItem } from '../cart/LineItem';
 import { QuoteRequestReference } from './QuoteRequest';
 import { StagedQuoteReference } from './StagedQuote';
@@ -18,7 +18,7 @@ export interface Quote {
   readonly customer?: Account;
   readonly sellerComment?: string;
   readonly buyerComment?: string;
-  readonly store?: StoreKeyReference;
+  readonly store?: Store;
   readonly lineItems: LineItem[];
   readonly totalPrice: Money;
   readonly shippingAddress?: Address;

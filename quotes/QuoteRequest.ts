@@ -2,7 +2,7 @@ import { LineItem } from '../cart/LineItem';
 import { StagedQuote } from './StagedQuote';
 import { Quote } from './Quote';
 import { Account } from '../account/Account';
-import { StoreKeyReference } from '../store/Store';
+import { Store } from '../store/Store';
 import { Money } from '../product/Money';
 import { BusinessUnit } from '../business-unit/BusinessUnit';
 import { Address } from '../account/Address';
@@ -29,7 +29,7 @@ export interface QuoteRequest {
 
   readonly customer: Account;
 
-  readonly store?: StoreKeyReference;
+  readonly store?: Store;
 
   readonly lineItems: LineItem[];
 

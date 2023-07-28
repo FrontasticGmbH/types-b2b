@@ -6,16 +6,6 @@ import { Discount } from './Discount';
 import { Tax } from './Tax';
 import { ShippingInfo } from './ShippingInfo';
 import { Money } from '../product/Money';
-import { Order } from './Order';
-import { Product } from '../product/Product';
-
-export interface Subscription {
-  order?: Order;
-  product?: Product;
-  sku?: string;
-  nextDeliveryDate?: string;
-  isActive?: boolean;
-}
 
 export interface CartReference {
   id: string;
@@ -42,7 +32,6 @@ export interface Cart {
   origin?: string;
   businessUnit?: string;
   isPreBuyCart?: boolean;
-  subscription?: Subscription;
   customerId?: string;
   store?: string;
   // TODO: import the logic from Cart.php

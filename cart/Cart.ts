@@ -24,7 +24,6 @@ export interface Cart {
   cartVersion?: string;
   lineItems?: LineItem[];
   email?: string;
-  birthday?: Date;
   shippingInfo?: ShippingInfo; // Info of the shipping method selected by the customer
   availableShippingMethods?: ShippingMethod[]; // Available shipping methods for this cart
   shippingAddress?: Address;

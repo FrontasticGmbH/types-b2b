@@ -31,7 +31,6 @@ export interface Cart {
   taxed?: Tax;
   origin?: string;
   businessUnit?: string;
-  isPreBuyCart?: boolean;
   customerId?: string;
   store?: string;
   // TODO: import the logic from Cart.php

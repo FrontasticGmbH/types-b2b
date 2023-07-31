@@ -13,6 +13,12 @@ export interface CartReference {
   obj?: Cart;
 }
 
+export enum CartOrigin {
+  Customer = 'Customer',
+  Merchant = 'Merchant',
+  Quote = 'Quote',
+}
+
 export interface Cart {
   cartId: string;
   cartVersion?: string;
@@ -29,9 +35,8 @@ export interface Cart {
   discountCodes?: Discount[];
   directDiscounts?: number | undefined;
   taxed?: Tax;
-  origin?: string;
+  origin?: CartOrigin | string;
   businessUnit?: string;
   customerId?: string;
   store?: string;
-  // TODO: import the logic from Cart.php
 }

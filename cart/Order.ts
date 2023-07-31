@@ -1,14 +1,16 @@
-import { ReturnLineItem } from './LineItem';
 import { Cart } from './Cart';
 
-export interface ReturnInfoItem extends ReturnLineItem {
-  createdAt?: string;
-  returnInfoId: string;
+export interface ReturnLineItem {
+  returnLineItemId?: string;
+  lineItemId: string;
+  count: number;
+  comment?: string;
+  createdAt?: Date;
 }
 
 export interface ReturnInfo {
-  items: ReturnInfoItem[];
-  returnDate?: string;
+  lineItems: ReturnLineItem[];
+  returnDate?: Date;
   returnTrackingId?: string;
 }
 

@@ -2,12 +2,6 @@ import { Discount } from './Discount';
 import { Variant } from '../product/Variant';
 import { Money } from '../product/Money';
 
-export interface ReturnLineItem {
-  count: number;
-  lineItemId: string;
-  comment?: string;
-}
-
 export interface LineItemShippingAddress {
   addressKey: string;
   count: number;

@@ -34,7 +34,7 @@ export interface Cart {
   discountCodes?: Discount[];
   taxed?: Tax;
   origin?: CartOrigin | string;
-  businessUnit?: string;
   customerId?: string;
-  store?: string;
+  businessUnitKey?: string;
+  storeKey?: string;
 }

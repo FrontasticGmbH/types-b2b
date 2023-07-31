@@ -12,13 +12,20 @@ export interface ReturnInfo {
   returnTrackingId?: string;
 }
 
+export enum OrderState {
+  Cancelled = 'Cancelled',
+  Complete = 'Complete',
+  Confirmed = 'Confirmed',
+  Open = 'Open',
+}
+
 export interface Order extends Cart {
   isPreBuyCart?: boolean;
   orderId?: string;
   orderVersion?: string;
-  orderState?: string;
+  orderState?: OrderState | string;
   createdAt?: Date;
-  businessUnit?: string;
+  businessUnitKey?: string;
   returnInfo?: ReturnInfo[];
   purchaseOrderNumber?: string;
   state?: any;

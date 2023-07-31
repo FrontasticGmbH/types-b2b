@@ -7,12 +7,6 @@ import { Tax } from './Tax';
 import { ShippingInfo } from './ShippingInfo';
 import { Money } from '../product/Money';
 
-export interface CartReference {
-  id: string;
-  typeId: 'cart';
-  obj?: Cart;
-}
-
 export enum CartOrigin {
   Customer = 'Customer',
   Merchant = 'Merchant',
@@ -34,7 +28,7 @@ export interface Cart {
   discountCodes?: Discount[];
   taxed?: Tax;
   origin?: CartOrigin | string;
-  customerId?: string;
+  accountId?: string;
   businessUnitKey?: string;
   storeKey?: string;
 }

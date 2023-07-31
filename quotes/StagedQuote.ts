@@ -1,6 +1,6 @@
 import { Account } from '../account/Account';
 import { BusinessUnit } from '../business-unit/BusinessUnit';
-import { Cart, CartReference } from '../cart/Cart';
+import { Cart } from '../cart/Cart';
 import { QuoteRequestReference } from './QuoteRequest';
 
 export interface StagedQuoteReference {
@@ -33,5 +33,5 @@ export interface StagedQuote {
 
   readonly businessUnit?: BusinessUnit;
 
-  quotationCart: Cart | CartReference;
+  quotationCart: Cart;
 }

@@ -20,7 +20,6 @@ export enum OrderState {
 }
 
 export interface Order extends Cart {
-  isPreBuyCart?: boolean;
   orderId?: string;
   orderVersion?: string;
   orderState?: OrderState | string;

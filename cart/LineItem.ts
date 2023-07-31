@@ -31,6 +31,4 @@ export interface LineItem {
     shippingAddresses?: LineItemShippingAddress[];
     valid: boolean; // true if the quantity of the Line Item is equal to the sum of the sub-quantities in shippingAddresses, else it is false.
   };
-  parentId?: string;
-  custom?: Record<string, any>;
 }

@@ -32,7 +32,6 @@ export interface Cart {
   sum?: Money;
   payments?: Payment[];
   discountCodes?: Discount[];
-  directDiscounts?: number | undefined;
   taxed?: Tax;
   origin?: CartOrigin | string;
   businessUnit?: string;

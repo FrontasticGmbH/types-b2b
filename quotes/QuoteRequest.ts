@@ -43,8 +43,6 @@ export interface QuoteRequest {
 
   readonly itemShippingAddresses?: Address[];
 
-  readonly directDiscounts?: any[];
-
   readonly businessUnit?: BusinessUnit;
   staged?: StagedQuote;
   quoted?: Quote;

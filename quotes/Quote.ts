@@ -25,7 +25,6 @@ export interface Quote {
   readonly billingAddress?: Address;
   readonly country?: string;
   readonly itemShippingAddresses?: Address[];
-  readonly directDiscounts?: any[];
   quoteState?: string;
   readonly businessUnit?: BusinessUnit;
 }

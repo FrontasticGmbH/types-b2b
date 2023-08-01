@@ -1,30 +1,15 @@
-import { Account } from '../account/Account';
-import { Address } from '../account/Address';
-import { BusinessUnit } from '../business-unit/BusinessUnit';
-import { Money } from '../product/Money';
-import { Store } from '../store/Store';
-import { LineItem } from '../cart/LineItem';
-import { QuoteRequestReference } from './QuoteRequest';
-import { StagedQuoteReference } from './StagedQuote';
+import { QuoteDraft } from './QuoteDraft';
 
-export interface Quote {
-  readonly id: string;
-  readonly version: number;
-  readonly key?: string;
-  readonly createdAt: string;
-  readonly lastModifiedAt: string;
-  readonly quoteRequest?: QuoteRequestReference;
-  readonly stagedQuote: StagedQuoteReference;
-  readonly customer?: Account;
-  readonly sellerComment?: string;
-  readonly buyerComment?: string;
-  readonly store?: Store;
-  readonly lineItems: LineItem[];
-  readonly totalPrice: Money;
-  readonly shippingAddress?: Address;
-  readonly billingAddress?: Address;
-  readonly country?: string;
-  readonly itemShippingAddresses?: Address[];
-  quoteState?: string;
-  readonly businessUnit?: BusinessUnit;
+export enum QuoteState {
+  Accepted = 'Accepted', // Accepted by the buyer.
+  Declined = 'Declined', // Declined by the buyer.
+  DeclinedForRenegotiation = 'DeclinedForRenegotiation', // Declined by the buyer for renegotiation.
+  Failed = 'Failed',
+  Pending = 'Pending', // Pending for Acceptance / Decline by the buyer.
+  Withdrawn = 'Withdrawn', // Withdrawn by the seller.
+}
+
+export interface Quote extends QuoteDraft {
+  quoteId?: string;
+  quoteState?: QuoteState;
 }

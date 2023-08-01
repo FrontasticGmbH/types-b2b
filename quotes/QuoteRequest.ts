@@ -1,6 +1,6 @@
 import { LineItem } from '../cart/LineItem';
 import { StagedQuote } from './StagedQuote';
-import { Quote } from './Quote';
+import { DeprecatedQuote } from './DeprecatedQuote';
 import { Account } from '../account/Account';
 import { Store } from '../store/Store';
 import { Money } from '../product/Money';
@@ -12,6 +12,7 @@ export interface QuoteRequestReference {
   typeId: 'quote-request';
   obj?: QuoteRequest;
 }
+
 export interface QuoteRequest {
   readonly id: string;
 
@@ -45,6 +46,6 @@ export interface QuoteRequest {
 
   readonly businessUnit?: BusinessUnit;
   staged?: StagedQuote;
-  quoted?: Quote;
+  quoted?: DeprecatedQuote;
   highlight?: boolean;
 }

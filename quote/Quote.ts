@@ -1,4 +1,7 @@
 import { QuoteDraft } from './QuoteDraft';
+import { LineItem } from '../cart/LineItem';
+import { Money } from '../product/Money';
+import { Tax } from '../cart/Tax';
 
 export enum QuoteState {
   Accepted = 'Accepted', // Accepted by the buyer.
@@ -11,5 +14,13 @@ export enum QuoteState {
 
 export interface Quote extends QuoteDraft {
   quoteId?: string;
+  key?: string;
   quoteState?: QuoteState;
+  quoteCreatedAt?: Date;
+  quoteLastModifiedAt?: Date;
+  quoteLineItems?: LineItem[];
+  quoteSum?: Money;
+  quoteTax?: Tax;
+  quoteExpirationDate?: Date;
+  quotedRequested?: QuoteDraft;
 }

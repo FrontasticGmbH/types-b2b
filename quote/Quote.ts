@@ -12,15 +12,17 @@ export enum QuoteState {
   Withdrawn = 'Withdrawn', // Withdrawn by the seller.
 }
 
-export interface Quote extends QuoteRequest {
+export interface Quote {
   quoteId?: string;
   key?: string;
   quoteState?: QuoteState;
-  quoteCreatedAt?: Date;
-  quoteLastModifiedAt?: Date;
-  quoteLineItems?: LineItem[];
-  quoteSum?: Money;
-  quoteTax?: Tax;
-  quoteExpirationDate?: Date;
+  createdAt?: Date;
+  lastModifiedAt?: Date;
+  buyerComment?: string;
+  sellerComment?: string;
+  lineItems?: LineItem[];
+  sum?: Money;
+  tax?: Tax;
+  expirationDate?: Date;
   quotedRequested?: QuoteRequest;
 }

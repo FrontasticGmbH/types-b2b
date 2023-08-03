@@ -31,7 +31,7 @@ export interface QuoteRequest {
   tax?: Tax;
   shippingAddress?: Address;
   billingAddress?: Address;
-  state?: QuoteRequestState;
+  quoteRequestState?: QuoteRequestState;
   itemShippingAddresses?: Address[];
   expirationDate?: Date;
 }

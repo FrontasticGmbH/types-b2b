@@ -4,7 +4,7 @@ import { BusinessUnit } from '../business-unit/BusinessUnit';
 import { Money } from '../product/Money';
 import { Store } from '../store/Store';
 import { LineItem } from '../cart/LineItem';
-import { QuoteRequestReference } from './QuoteRequest';
+import { QuoteRequestReference } from './DeprecatedQuoteRequest';
 import { StagedQuoteReference } from './StagedQuote';
 
 export interface DeprecatedQuote {

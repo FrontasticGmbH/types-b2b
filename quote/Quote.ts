@@ -1,4 +1,4 @@
-import { QuoteDraft } from './QuoteDraft';
+import { QuoteRequest } from './QuoteRequest';
 import { LineItem } from '../cart/LineItem';
 import { Money } from '../product/Money';
 import { Tax } from '../cart/Tax';
@@ -12,7 +12,7 @@ export enum QuoteState {
   Withdrawn = 'Withdrawn', // Withdrawn by the seller.
 }
 
-export interface Quote extends QuoteDraft {
+export interface Quote extends QuoteRequest {
   quoteId?: string;
   key?: string;
   quoteState?: QuoteState;
@@ -22,5 +22,5 @@ export interface Quote extends QuoteDraft {
   quoteSum?: Money;
   quoteTax?: Tax;
   quoteExpirationDate?: Date;
-  quotedRequested?: QuoteDraft;
+  quotedRequested?: QuoteRequest;
 }

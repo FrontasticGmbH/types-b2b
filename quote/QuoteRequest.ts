@@ -1,51 +1,37 @@
-import { LineItem } from '../cart/LineItem';
-import { StagedQuote } from './StagedQuote';
-import { DeprecatedQuote } from './DeprecatedQuote';
 import { Account } from '../account/Account';
-import { Store } from '../store/Store';
-import { Money } from '../product/Money';
-import { BusinessUnit } from '../business-unit/BusinessUnit';
 import { Address } from '../account/Address';
+import { BusinessUnit } from '../business-unit/BusinessUnit';
+import { Money } from '../product/Money';
+import { Store } from '../store/Store';
+import { LineItem } from '../cart/LineItem';
+import { Tax } from '../cart/Tax';
 
-export interface QuoteRequestReference {
-  id: string;
-  typeId: 'quote-request';
-  obj?: QuoteRequest;
+export enum QuoteRequestState {
+  Accepted = 'Accepted', // Accepted by the seller.
+  Cancelled = 'Cancelled', // Cancelled / Withdrawn by the buyer.
+  Closed = 'Closed', // No further action that can be performed by any party.
+  Rejected = 'Rejected', // Rejected by the seller.
+  Submitted = 'Submitted', // Submitted by the buyer.
+  InProgress = 'InProgress', // The seller is preparing the Quote.
+  Sent = 'Sent', // Sent by the seller.
 }
 
 export interface QuoteRequest {
-  readonly id: string;
-
-  readonly version: number;
-
-  readonly key?: string;
-
-  readonly createdAt: string;
-
-  readonly lastModifiedAt: string;
-
-  readonly quoteRequestState: string;
-
-  readonly comment?: string;
-
-  readonly customer: Account;
-
-  readonly store?: Store;
-
-  readonly lineItems: LineItem[];
-
-  readonly totalPrice: Money;
-
-  readonly shippingAddress?: Address;
-
-  readonly billingAddress?: Address;
-
-  readonly country?: string;
-
-  readonly itemShippingAddresses?: Address[];
-
-  readonly businessUnit?: BusinessUnit;
-  staged?: StagedQuote;
-  quoted?: DeprecatedQuote;
-  highlight?: boolean;
+  quoteRequestId?: string;
+  key?: string;
+  createdAt?: Date;
+  lastModifiedAt?: Date;
+  account?: Account;
+  sellerComment?: string;
+  buyerComment?: string;
+  store?: Store;
+  businessUnit?: BusinessUnit;
+  lineItems?: LineItem[];
+  sum?: Money;
+  tax?: Tax;
+  shippingAddress?: Address;
+  billingAddress?: Address;
+  state?: QuoteRequestState;
+  itemShippingAddresses?: Address[];
+  expirationDate?: Date;
 }

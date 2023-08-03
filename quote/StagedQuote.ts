@@ -1,7 +1,7 @@
 import { Account } from '../account/Account';
 import { BusinessUnit } from '../business-unit/BusinessUnit';
 import { Cart } from '../cart/Cart';
-import { QuoteRequestReference } from './QuoteRequest';
+import { QuoteRequestReference } from './DeprecatedQuoteRequest';
 
 export interface StagedQuoteReference {
   id: string;

@@ -34,4 +34,5 @@ export interface QuoteRequest {
   quoteRequestState?: QuoteRequestState;
   itemShippingAddresses?: Address[];
   expirationDate?: Date;
+  quoteRequestVersion?: string;
 }

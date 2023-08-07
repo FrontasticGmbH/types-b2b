@@ -3,6 +3,7 @@ export enum FilterFieldTypes {
   ENUM = 'enum',
   TEXT = 'text',
   NUMBER = 'number',
+  MONEY = 'money',
 }
 
 export interface FilterFieldValue {

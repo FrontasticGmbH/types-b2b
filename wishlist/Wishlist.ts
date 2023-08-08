@@ -1,9 +1,8 @@
 import { Store } from '../store/Store';
 import { LineItem } from './LineItem';
 
-
 export interface Wishlist {
-  wishlistId: string;
+  wishlistId?: string;
   wishlistVersion?: string;
   anonymousId?: string;
   accountId?: string;

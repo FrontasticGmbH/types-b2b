@@ -24,10 +24,9 @@ export enum OrderState {
 export interface Order extends Cart {
   orderId?: string;
   orderVersion?: string;
-  orderState?: OrderState | string;
+  orderState?: OrderState;
   createdAt?: Date;
   businessUnitKey?: string;
   returnInfo?: ReturnInfo[];
   purchaseOrderNumber?: string;
-  state?: any;
 }

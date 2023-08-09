@@ -27,7 +27,7 @@ export interface Cart {
   payments?: Payment[];
   discountCodes?: Discount[];
   taxed?: Tax;
-  origin?: CartOrigin | string;
+  origin?: CartOrigin;
   accountId?: string;
   businessUnitKey?: string;
   storeKey?: string;

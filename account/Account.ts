@@ -16,4 +16,5 @@ export interface Account {
   confirmed?: boolean;
   addresses?: Address[];
   apiToken?: string;
+  vatNumber?: string;
 }

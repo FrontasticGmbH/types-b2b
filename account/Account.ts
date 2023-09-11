@@ -17,4 +17,5 @@ export interface Account {
   addresses?: Address[];
   apiToken?: string;
   vatNumber?: string;
+  version?: number;
 }

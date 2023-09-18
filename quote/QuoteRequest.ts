@@ -5,6 +5,7 @@ import { Money } from '../product/Money';
 import { Store } from '../store/Store';
 import { LineItem } from '../cart/LineItem';
 import { Tax } from '../cart/Tax';
+import { Cart } from '../cart/Cart';
 
 export enum QuoteRequestState {
   Accepted = 'Accepted', // Accepted by the seller.
@@ -34,5 +35,6 @@ export interface QuoteRequest {
   quoteRequestState?: QuoteRequestState;
   itemShippingAddresses?: Address[];
   expirationDate?: Date;
+  quotationCart?: Cart;
   quoteRequestVersion?: string;
 }

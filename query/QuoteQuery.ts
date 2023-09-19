@@ -1,4 +1,3 @@
-import { Filter } from './Filter';
 import { PaginatedQuery } from './PaginatedQuery';
 import { QuoteState } from '../quote/Quote';
 import { QuoteRequestState } from '../quote/QuoteRequest';
@@ -15,8 +14,6 @@ export interface SortAttributes {
 export interface QuoteQuery extends PaginatedQuery {
   accountId: string;
   quoteIds?: string[];
-  quoteStates?: QuoteState[] | QuoteRequestState[];
-  createdBefore?: Date;
+  quoteStates?: (QuoteState | QuoteRequestState)[];
   sortAttributes?: SortAttributes;
-  filters?: Filter[];
 }

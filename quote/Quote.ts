@@ -7,6 +7,7 @@ export enum QuoteState {
   Accepted = 'Accepted', // Accepted by the buyer.
   Declined = 'Declined', // Declined by the buyer.
   DeclinedForRenegotiation = 'DeclinedForRenegotiation', // Declined by the buyer for renegotiation.
+  RenegotiationAddressed = 'RenegotiationAddressed', // Renegotiation Addressed by the seller.
   Failed = 'Failed',
   Pending = 'Pending', // Pending for Acceptance / Decline by the buyer.
   Withdrawn = 'Withdrawn', // Withdrawn by the seller.

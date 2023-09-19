@@ -1,6 +1,5 @@
 import { Filter } from './Filter';
 import { PaginatedQuery } from './PaginatedQuery';
-import { Facet } from './Facet';
 import { QuoteState } from '../quote/Quote';
 import { QuoteRequestState } from '../quote/QuoteRequest';
 
@@ -14,17 +13,10 @@ export interface SortAttributes {
 }
 
 export interface QuoteQuery extends PaginatedQuery {
-  // category?: string;
-  // productIds?: string[];
-  // productType?: string;
-  // skus?: string[];
-  // query?: string;
-  // filters?: Filter[];
-  // facets?: Facet[];
-  // sortAttributes?: SortAttributes;
-  // storeKey?: string;
   accountId: string;
   quoteIds?: string[];
   quoteStates?: QuoteState[] | QuoteRequestState[];
   createdBefore?: Date;
+  sortAttributes?: SortAttributes;
+  filters?: Filter[];
 }

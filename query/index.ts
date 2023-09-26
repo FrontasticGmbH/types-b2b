@@ -9,16 +9,16 @@ import { TermFacet } from './TermFacet';
 import { TermFilter } from './TermFilter';
 
 export {
-  CategoryQuery,
-  Facet,
-  Filter,
-  FilterTypes,
-  PaginatedQuery,
-  ProductQuery,
-  SortAttributes,
-  SortOrder,
-  RangeFacet,
-  RangeFilter,
-  TermFacet,
-  TermFilter,
+  type CategoryQuery,
+  type Facet,
+  type Filter,
+  type FilterTypes,
+  type PaginatedQuery,
+  type ProductQuery,
+  type SortAttributes,
+  type SortOrder,
+  type RangeFacet,
+  type RangeFilter,
+  type TermFacet,
+  type TermFilter,
 };

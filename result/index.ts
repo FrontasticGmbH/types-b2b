@@ -3,4 +3,4 @@ import { RangeFacet } from './RangeFacet';
 import { Term } from './Term';
 import { TermFacet } from './TermFacet';
 
-export { Facet, FacetTypes, RangeFacet, Term, TermFacet };
+export { type Facet, type FacetTypes, type RangeFacet, type Term, type TermFacet };

@@ -1,4 +1,11 @@
 import { Associate, AssociateRole } from './Associate';
 import { BusinessUnit, BusinessUnitStatus, BusinessUnitType, StoreMode } from './BusinessUnit';
 
-export { Associate, AssociateRole, BusinessUnit, BusinessUnitStatus, BusinessUnitType, StoreMode };
+export {
+  type Associate,
+  type AssociateRole,
+  type BusinessUnit,
+  type BusinessUnitStatus,
+  type BusinessUnitType,
+  type StoreMode,
+};

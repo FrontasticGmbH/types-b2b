@@ -36,5 +36,5 @@ export interface QuoteRequest {
   itemShippingAddresses?: Address[];
   expirationDate?: Date;
   quotationCart?: Cart;
-  quoteRequestVersion?: string;
+  quoteRequestVersion?: number;
 }

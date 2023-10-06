@@ -26,5 +26,5 @@ export interface Quote {
   tax?: Tax;
   expirationDate?: Date;
   quoteRequest?: QuoteRequest;
-  quoteVersion?: string;
+  quoteVersion?: number;
 }

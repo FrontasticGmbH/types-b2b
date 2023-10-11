@@ -4,7 +4,7 @@ import { PaginatedQuery, SortAttributes } from '../query';
 export interface OrderQuery extends PaginatedQuery {
   accountId: string;
   orderIds?: string[];
-  orderState?: OrderState[];
+  orderStates?: OrderState[];
   sortAttributes?: SortAttributes;
   businessUnitKey?: string;
   query?: string;

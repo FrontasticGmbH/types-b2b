@@ -5,4 +5,5 @@ export interface Category {
   depth?: number;
   _url?: string;
   slug?: string;
+  subCategories: Category[];
 }

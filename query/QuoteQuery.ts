@@ -16,4 +16,5 @@ export interface QuoteQuery extends PaginatedQuery {
   quoteIds?: string[];
   quoteStates?: (QuoteState | QuoteRequestState)[];
   sortAttributes?: SortAttributes;
+  query?: string;
 }

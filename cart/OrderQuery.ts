@@ -1,19 +1,10 @@
 import { OrderState } from './Order';
-import { PaginatedQuery } from '../query/PaginatedQuery';
-
-export enum SortOrder {
-  ASCENDING = 'ascending',
-  DESCENDING = 'descending',
-}
-
-export interface SortAttributes {
-  [key: string]: any;
-}
+import { PaginatedQuery, SortAttributes } from '../query';
 
 export interface OrderQuery extends PaginatedQuery {
   accountId: string;
   orderIds?: string[];
-  orderState?: OrderState[];
+  orderStates?: OrderState[];
   sortAttributes?: SortAttributes;
   businessUnitKey?: string;
   query?: string;

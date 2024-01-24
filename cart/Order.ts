@@ -21,12 +21,24 @@ export enum OrderState {
   Open = 'Open',
 }
 
+export enum ShipmentState {
+  Backorder = 'Backorder',
+  Delayed = 'Delayed',
+  Delivered = 'Delivered',
+  Partial = 'Partial',
+  Pending = 'Pending',
+  Ready = 'Ready',
+  Shipped = 'Shipped',
+}
+
 export interface Order extends Cart {
   orderId?: string;
   orderVersion?: string;
+  orderNumber?: string;
   orderState?: OrderState;
   createdAt?: Date;
   businessUnitKey?: string;
   returnInfo?: ReturnInfo[];
   purchaseOrderNumber?: string;
+  shipmentState?: ShipmentState;
 }

@@ -1,13 +1,9 @@
 
-## Version 1.4.0 (2024-01-24)
+## Version 1.5.0 (2024-02-22)
 
 ** New Features and Improvements **
 
-- Added WishlistQuery now supports custom storeKey
-- Renamed ProductResult to ProductPaginatedResult
-- Deprecated Query PaginatedResult renamed to Quote Result
-- CategoryQuery supports format parameter, which returns result in tree or flat structure
-- OrderQuery supports filtering by businessUnit, shipmentState
+- Added types to support new b2b functionalities 
 
 ## Version 1.3.0 (2023-10-24)
 
